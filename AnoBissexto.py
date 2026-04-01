@@ -8,7 +8,7 @@ if ano <=1000:
         print('Esse ano é bissexto, já que é múltiplo de 400')
     else:
         print('Esse ano não é bissexto pois não é múltiplo de 400')
-elif ano >=1000:
+else:
     bissexto = ano%4
     if bissexto == 0:
         print('Esse ano é bissexto, já que é múltiplo de 4')
