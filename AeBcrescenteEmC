@@ -1,0 +1,22 @@
+A = []
+for i in range(10):
+ x = int(input('Digite um numero para  alista A: '))
+ A.append(x)
+B = []
+for i in range(10):
+ x = int(input('Digite um numero para  alista B: '))
+ B.append(x)
+x1 = 0
+x2 = 0
+C = []
+while x1<len(A) and x2<len(B):
+ if A[x1] < B[x2]:
+  C.append(A[x1])
+  x1+=1
+ else:
+  C.append(B[x2])
+  x2+=1
+if x1 == len(A):
+ C.extend(B[x2:])
+else:
+ C.extend(A[x1:])
