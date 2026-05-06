@@ -1,0 +1,30 @@
+menor = 39.7
+temperaturas = []
+maior = 15.5
+media = 0
+qtdMenor = 0
+qtdMaior = 0
+with open ('temperaturas.txt', 'r') as arq:
+    for linha in arq:
+        temp = float(linha.strip())
+        temperaturas.append(temp)
+        media += temp
+        if temp < menor:
+            menor = temp
+        else:
+            menor = menor
+        if temp > maior:
+            maior = temp
+        else:
+            maior = maior
+media = media/121
+for i in temperaturas:
+    if i < media:
+        qtdMenor+=1
+    else:
+        qtdMaior+=1
+print(f'A menor temperatura registrada foi de {menor}°C')
+print(f'A maior temperatura registrada foi de {maior}°C')
+print(f'A temperatura média é de {media}°C')
+print(f'A quantidade de dias que tiveram uma temperatura abaixo da média é de {qtdMenor} dias')
+print(f'A quantidade de dias que tiveram uma temperatura acima da média é de {qtdMaior} dias')
